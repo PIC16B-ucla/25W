@@ -174,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#install-and-configure-anaconda" id="toc-install-and-configure-anaconda" class="nav-link active" data-scroll-target="#install-and-configure-anaconda">1. Install and Configure Anaconda</a>
   <ul class="collapse">
   <li><a href="#a.-install-anaconda" id="toc-a.-install-anaconda" class="nav-link" data-scroll-target="#a.-install-anaconda">a. Install Anaconda</a></li>
-  <li><a href="#b.-create-the-pic16b-24f-anaconda-environment" id="toc-b.-create-the-pic16b-24f-anaconda-environment" class="nav-link" data-scroll-target="#b.-create-the-pic16b-24f-anaconda-environment">b. Create the <code>PIC16B-24F</code> Anaconda Environment</a></li>
+  <li><a href="#b.-create-the-pic16b-25w-anaconda-environment" id="toc-b.-create-the-pic16b-25w-anaconda-environment" class="nav-link" data-scroll-target="#b.-create-the-pic16b-25w-anaconda-environment">b. Create the <code>PIC16B-25W</code> Anaconda Environment</a></li>
   <li><a href="#d.-launch-jupyterlab" id="toc-d.-launch-jupyterlab" class="nav-link" data-scroll-target="#d.-launch-jupyterlab">d.&nbsp;Launch JupyterLab</a></li>
   <li><a href="#e.-verify" id="toc-e.-verify" class="nav-link" data-scroll-target="#e.-verify">e. Verify</a></li>
   <li><a href="#f.-creating-a-new-environment-on-anaconda-optional" id="toc-f.-creating-a-new-environment-on-anaconda-optional" class="nav-link" data-scroll-target="#f.-creating-a-new-environment-on-anaconda-optional">f.&nbsp;Creating a new environment on Anaconda (optional)</a></li>
@@ -210,9 +210,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><em>Example of installing Anaconda to the directory corresponding to your username.</em></p>
 </section>
-<section id="b.-create-the-pic16b-24f-anaconda-environment" class="level3">
-<h3 class="anchored" data-anchor-id="b.-create-the-pic16b-24f-anaconda-environment">b. Create the <code>PIC16B-24F</code> Anaconda Environment</h3>
-<p>We will create <code>PIC16B-24F</code> anaconda environment with specific package versions. They are listed in a <code>.yml</code> file, depending on OS. We will fix the versions of the following python and other packages throughout the quarter:</p>
+<section id="b.-create-the-pic16b-25w-anaconda-environment" class="level3">
+<h3 class="anchored" data-anchor-id="b.-create-the-pic16b-25w-anaconda-environment">b. Create the <code>PIC16B-25W</code> Anaconda Environment</h3>
+<p>We will create <code>PIC16B-25W</code> anaconda environment with specific package versions. They are listed in a <code>.yml</code> file, depending on OS. We will fix the versions of the following python and other packages throughout the quarter:</p>
 <ul>
 <li>python=3.11.6</li>
 <li>nb_conda=2.2.1</li>
@@ -232,33 +232,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>jupyterlab=3.6.3</li>
 <li>notebook=6.5.4</li>
 </ul>
-<p>Download <code>PIC16B-24F-&lt;os&gt;.yml</code> file corresponding to your OS and run the following from the Anaconda Prompt from the directory where the file is located:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> PIC16B-24F-<span class="op">&lt;</span>os<span class="op">&gt;</span>.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This will create a new environment PIC16B-24F, and I will use that environment in the lectures. Full environment for each OS:</p>
+<p>Download <code>PIC16B-25W-&lt;os&gt;.yml</code> file corresponding to your OS and run the following from the Anaconda Prompt from the directory where the file is located:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> PIC16B-25W-<span class="op">&lt;</span>os<span class="op">&gt;</span>.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will create a new environment PIC16B-25W, and I will use that environment in the lectures. Full environment for each OS:</p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/24F/main/posts/installation/PIC16B-24F-windows.yml">Windows</a> <strong>UPDATED 10/2</strong></li>
-<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/24F/main/posts/installation/PIC16B-24F-mac-silicon.yml">Mac M1/M2</a></li>
-<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/24F/main/posts/installation/PIC16B-24F-linux.yml">Linux</a></li>
-<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/24F/main/posts/installation/PIC16B-24F-generic.yml">Generic</a> – e.g., Mac with Intel chip (sorry, I no longer own one). You may want to change conda’s environment solver to <a href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community">mamba</a> for faster installation.</li>
+<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/25W/main/posts/installation/PIC16B-25W-windows.yml">Windows</a> <strong>UPDATED 10/2</strong></li>
+<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/25W/main/posts/installation/PIC16B-25W-mac-silicon.yml">Mac M1/M2</a></li>
+<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/25W/main/posts/installation/PIC16B-25W-linux.yml">Linux</a></li>
+<li><a href="https://raw.githubusercontent.com/PIC16B-ucla/25W/main/posts/installation/PIC16B-25W-generic.yml">Generic</a> – e.g., Mac with Intel chip (sorry, I no longer own one). You may want to change conda’s environment solver to <a href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community">mamba</a> for faster installation.</li>
 </ul>
 <p>Note that an autograder will be in use for this course, set up on Ubuntu Linux.</p>
 <section id="installing-additional-packages" class="level4">
 <h4 class="anchored" data-anchor-id="installing-additional-packages">Installing additional packages</h4>
-<p>We will mainly be using the <code>PIC16B-24F</code> environment throughout the course – changing package versions unless prompted is discouraged. In the future, if you ever attempt to import a package and encounter an error, you may attempt to install it via the Environments tab on Anaconda Navigator. Click on Channels button and add “conda-forge” channel. Then, search for the package you need on the right-hand side (you may need to update the index).</p>
+<p>We will mainly be using the <code>PIC16B-25W</code> environment throughout the course – changing package versions unless prompted is discouraged. In the future, if you ever attempt to import a package and encounter an error, you may attempt to install it via the Environments tab on Anaconda Navigator. Click on Channels button and add “conda-forge” channel. Then, search for the package you need on the right-hand side (you may need to update the index).</p>
 <p>Check the box beside this package, and then click “Apply” to install.</p>
 <p>In this course, we’ll primarily demonstrate deep learning libraries (e.g., Keras, TensorFlow, and PyTorch) using Google Colab, which has some significant benefits related to speed of computation. However, you can also try to install these packages via the package manager.</p>
 <p>Note: If you want to use command lines to install Python packages in the future, try to follow prompts that look like</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda activate PIC16B<span class="op">-</span><span class="dv">24</span><span class="er">F</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>conda activate PIC16B<span class="op">-</span><span class="dv">25</span><span class="er">W</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>conda install <span class="op">--</span>channel<span class="op">=</span>conda<span class="op">-</span>forge <span class="op">&lt;</span>package name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>rather than the ones that start with pip install. If this sentence didn’t make sense to you, you can ignore it and stick to using Anaconda navigator.</p>
 </section>
 </section>
 <section id="d.-launch-jupyterlab" class="level3">
 <h3 class="anchored" data-anchor-id="d.-launch-jupyterlab">d.&nbsp;Launch JupyterLab</h3>
-<p>Now launch Anaconda Navigator and open the “Home” tab. Launch JupyterLab. Select the environment <code>PIC16B-24F</code>.</p>
-<p><img src="select_environ_nav.png" class="img-fluid"> <em>Selecting the PIC16B-24F environment on Anaconda Navigator</em></p>
-<p>Create a new Jupyter notebook. Change the kernel to the <code>PIC16B-24F</code> environment that you created in Step 1b.</p>
-<p><img src="select_environ_lab.png" class="img-fluid"> <em>Selecting the PIC16B-24F environment from within a Jupyter notebook.</em></p>
+<p>Now launch Anaconda Navigator and open the “Home” tab. Launch JupyterLab. Select the environment <code>PIC16B-25W</code>.</p>
+<p><img src="select_environ_nav.png" class="img-fluid"> <em>Selecting the PIC16B-25W environment on Anaconda Navigator</em></p>
+<p>Create a new Jupyter notebook. Change the kernel to the <code>PIC16B-</code> environment that you created in Step 1b.</p>
+<p><img src="select_environ_lab.png" class="img-fluid"> <em>Selecting the PIC16B-25W environment from within a Jupyter notebook.</em></p>
 </section>
 <section id="e.-verify" class="level3">
 <h3 class="anchored" data-anchor-id="e.-verify">e. Verify</h3>
