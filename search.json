@@ -1,0 +1,226 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "PIC 16B - 2024 Fall Blog"
+  },
+  {
+    "objectID": "posts/quarto/index.html",
+    "href": "posts/quarto/index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "In this post, we’ll get set up with Quarto.\nQuarto is a static site converter, which you can use to turn plaintext documents into attractive webpages. You should have already installed Quarto and signed up for GitHub when completing the software installation (details in BruinLearn)."
+  },
+  {
+    "objectID": "posts/quarto/index.html#make-a-github-repository",
+    "href": "posts/quarto/index.html#make-a-github-repository",
+    "title": "Hello, Quarto",
+    "section": "Make a GitHub repository",
+    "text": "Make a GitHub repository\nLet’s first make a GitHub repository to host your blog.\n\nFrom your user page (https://github.com/&lt;your_user_name&gt;), click on the Repositories tab.\nClick on New button.\nCreate a new repository. Carefully choose your repository name, and make sure not to select Add a README file to create a completely empty repository."
+  },
+  {
+    "objectID": "posts/quarto/index.html#generate-blog-files-using-quarto",
+    "href": "posts/quarto/index.html#generate-blog-files-using-quarto",
+    "title": "Hello, Quarto",
+    "section": "Generate blog files using Quarto",
+    "text": "Generate blog files using Quarto\nThis should be very straightforward using the instructions at this link.\nAll you need to do is run the following code at the terminal.\nquarto create-project myblog --type website:blog\nThen once a folder appears, run this line.\nquarto preview myblog\nFeel free to replace myblog with a different name.\nquarto preview should open up a link that looks like http://localhost:6832 in your web browser. The port number probably looks different."
+  },
+  {
+    "objectID": "posts/quarto/index.html#turn-the-generated-quarto-blog-into-a-github-repository",
+    "href": "posts/quarto/index.html#turn-the-generated-quarto-blog-into-a-github-repository",
+    "title": "Hello, Quarto",
+    "section": "Turn the generated Quarto blog into a GitHub repository",
+    "text": "Turn the generated Quarto blog into a GitHub repository\nFirst, move into your blog folder.\ncd myblog\nThen, follow the steps under “…or create a new repository on the command line” part of your GitHub repository inside your blog folder.\necho \"# &lt;your-repository-name&gt;\" &gt;&gt; README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main\ngit remote add origin https://github.com/&lt;your-user-name&gt;/&lt;your-repository-name&gt;.git\ngit push -u origin main"
+  },
+  {
+    "objectID": "posts/quarto/index.html#publish-on-github-pages",
+    "href": "posts/quarto/index.html#publish-on-github-pages",
+    "title": "Hello, Quarto",
+    "section": "Publish on GitHub Pages",
+    "text": "Publish on GitHub Pages\nNow, run this line on your terminal in the same directory.\nquarto publish\nWhen prompted, select these options.\n? Provider: › GitHub Pages\n? Authorize (Y/n) › Yes\nFinally, the terminal should print out something like this:\nSwitched to a new branch 'gh-pages'\n[gh-pages (root-commit) 386cdba] Initializing gh-pages branch\nremote:\nremote: Create a pull request for 'gh-pages' on GitHub by visiting:\nremote:      https://github.com/kose-y/test-quarto/pull/new/gh-pages\nremote:\nTo https://github.com/kose-y/test-quarto.git\n* [new branch]      HEAD -&gt; gh-pages\nYour branch is up to date with 'origin/main'.\nSwitched to branch 'main'\nFrom https://github.com/kose-y/test-quarto\n* branch            gh-pages   -&gt; FETCH_HEAD\nRendering for publish:\n\n[1/4] posts/post-with-code/index.qmd\n[2/4] posts/welcome/index.qmd\n[3/4] index.qmd\n[4/4] about.qmd\n\nbranch 'gh-pages' set up to track 'origin/gh-pages'.\nHEAD is now at 386cdba Initializing gh-pages branch\nPreparing worktree (resetting branch 'gh-pages'; was at 386cdba)\nfatal: pathspec '.' did not match any files\n[gh-pages 1c6e662] Built site for gh-pages\n29 files changed, 6535 insertions(+)\ncreate mode 100644 .nojekyll\ncreate mode 100644 about.html\ncreate mode 100644 index.html\ncreate mode 100644 listings.json\ncreate mode 100644 posts/post-with-code/image.jpg\ncreate mode 100644 posts/post-with-code/index.html\ncreate mode 100644 posts/welcome/index.html\ncreate mode 100644 posts/welcome/thumbnail.jpg\ncreate mode 100644 profile.jpg\ncreate mode 100644 search.json\ncreate mode 100644 site_libs/bootstrap/bootstrap-icons.css\ncreate mode 100644 site_libs/bootstrap/bootstrap-icons.woff\ncreate mode 100644 site_libs/bootstrap/bootstrap.min.css\ncreate mode 100644 site_libs/bootstrap/bootstrap.min.js\ncreate mode 100644 site_libs/clipboard/clipboard.min.js\ncreate mode 100644 site_libs/quarto-html/anchor.min.js\ncreate mode 100644 site_libs/quarto-html/popper.min.js\ncreate mode 100644 site_libs/quarto-html/quarto-syntax-highlighting.css\ncreate mode 100644 site_libs/quarto-html/quarto.js\ncreatorigin https://github.com/kose-y/test-quarto.git (fetch)\norigin  https://github.com/kose-y/test-quarto.git (push)\nTo https://github.com/kose-y/test-quarto.git\n386cdba..1c6e662  HEAD -&gt; gh-pages\n\n[✓] Deploying gh-pages branch to website (this may take a few minutes)\n[✓] Published to https://kose-y.github.io/test-quarto/\nGo to the website on the last line, and if you see a webpage there, congrats! Your blog is up and running. At the moment, it’s just a copy of the template, so it’s not personalized in any way."
+  },
+  {
+    "objectID": "posts/quarto/index.html#edit-a-post",
+    "href": "posts/quarto/index.html#edit-a-post",
+    "title": "Hello, Quarto",
+    "section": "Edit a post",
+    "text": "Edit a post\nPreview your blog again:\nquarto preview\nThen edit the welcome page in posts/welcome/index.qmd. Any sort of change will do.\nOnce you save the file, you’ll see that the preview page on the web browser is automatically updated.\nYou can also add a new page following instructions in this post."
+  },
+  {
+    "objectID": "posts/quarto/index.html#edit-configuration",
+    "href": "posts/quarto/index.html#edit-configuration",
+    "title": "Hello, Quarto",
+    "section": "Edit configuration",
+    "text": "Edit configuration\nThe file posts/_metadata.yml contains shared options for the posts. It is highly recommended to modify freeze: true to freeze: auto, as you are expected to modify your posts often.\n# options specified here will apply to all posts in this folder\n\n# freeze computational output\n# (see https://quarto.org/docs/projects/code-execution.html#freeze)\nfreeze: auto\n\n# Enable banner style title blocks\ntitle-block-banner: true\nPlease check this page for more information."
+  },
+  {
+    "objectID": "posts/quarto/index.html#publish-again",
+    "href": "posts/quarto/index.html#publish-again",
+    "title": "Hello, Quarto",
+    "section": "Publish again",
+    "text": "Publish again\nOnce you’ve made all these additions, publish the result again using quarto publish. In a few minutes, you should see your new post on your website."
+  },
+  {
+    "objectID": "posts/quarto/index.html#references",
+    "href": "posts/quarto/index.html#references",
+    "title": "Hello, Quarto",
+    "section": "References",
+    "text": "References\n\nOfficial documentation on how to create Quarto blogs"
+  },
+  {
+    "objectID": "posts/hw0/index.html",
+    "href": "posts/hw0/index.html",
+    "title": "Homework 0",
+    "section": "",
+    "text": "In this blog post assignment, you’ll create a short post for your new website. The primary purpose is to give you some practice working with Quarto blogging with Python code.\nMake sure to check the “Specifications” section at the bottom of this assignment for an explicit list of criteria that your blog post must meet in order to receive credit.\nNOTE: Writing is always part of your homework! The recommended style is as if you are writing a tech blog post."
+  },
+  {
+    "objectID": "posts/hw0/index.html#complete-the-hello-quarto-activity",
+    "href": "posts/hw0/index.html#complete-the-hello-quarto-activity",
+    "title": "Homework 0",
+    "section": "1. Complete the Hello, Quarto activity",
+    "text": "1. Complete the Hello, Quarto activity\nYour first step should be to complete the Hello Quarto activity to help you get familiar with blogging with Quarto. If you already completed this activity in Discussion, then you can skip to the next step.\nIf you haven’t done so already, now is a good time to modify your site. Look around the site’s files and see if you can figure out how to modify the About page and the blog’s title from about.qmd and _quarto.yml.\nSee these pages for help: about page, config options.\nIf you are comfortable with css, then you can directly modify style.css and other files in the repo.\nAll this is optional, and it’s not necessary to put your real name or real photo anywhere on the site."
+  },
+  {
+    "objectID": "posts/hw0/index.html#speedbump-the-autograder",
+    "href": "posts/hw0/index.html#speedbump-the-autograder",
+    "title": "Homework 0",
+    "section": "2. Speedbump: The Autograder",
+    "text": "2. Speedbump: The Autograder\nBefore we proceed, let’s talk about the autograder. Some of the specs in the homework assignments may require you to go through an autograder. Depending on the homework, you must submit a single Python file (.py) or a compressed .zip file containing multiple code files to the “autograder” submission window. For future homework, the autograder task will be a part of the main programming task. For this one, let’s just do a simple PIC 16A-level task. Remember that for your blog post to be graded, you must first pass the autograder. I strongly encourage you to do so a few days before the deadline. You have an unlimited number of submissions to the autograder.\n\nProblem. Define make_count_dictionary in HW0.py\nIn a separate file named HW0.py (please do not use a different name), write the function make_count_dictionary that takes a list L and returns a dictionary D where:\n\nThe keys of D are the unique elements of L (i.e., each element of L appears only once).\nThe value D[i] is the number of times that i appears in list L.\n\nYour code should work for lists of strings, lists of integers, and lists containing both strings and integers.\nFor example:\n# input\nL = [\"a\", \"a\", \"b\", \"c\"]\n# output\n{\"a\" : 2, \"b\" : 1, \"c\" : 1}\nFor this homework, you don’t need to mention this task in your blog."
+  },
+  {
+    "objectID": "posts/hw0/index.html#create-a-post",
+    "href": "posts/hw0/index.html#create-a-post",
+    "title": "Homework 0",
+    "section": "3. Create a post",
+    "text": "3. Create a post\nCreate a simple blog post, using the instructions and demonstrations here. Here is the prompt for your post:\n\nWrite a tutorial explaining how to construct an interesting data visualization of the Palmer Penguins data set.\n\nYou can read the data into Python by running:\nimport pandas as pd\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nYour visualization does not have to be complex or fancy, but it should be highly readable and appropriately labeled.\nYour post should include the image directly under the code that generates it, as demonstrated here.\nDo not publish your blog page for now. You will be allowed to publish your blog after the quarter.\nThere will be three Gradescope assignments open for submission, the first one for autograder, the second for PDF, and the third one for files. You have to submit all of them for your homework to earn homework credits.\n\nFor the autograder assignment, please follow the directions.\nFor the PDF assingment, please submit your newly-created blog preview printed as PDF.\n\nUse quarto preview to open the page.\n\nFor the files assignment, please submit any code file you wrote for your homework, not including what you have submitted for autograder. All the .py file, .ipynb file, or .qmd files all included. It should include a .py file converted from any .ipynb file. The grader should be able to reproduce your result from the code you submitted.\n\nIt must include index.ipynb, the Jupyter Notebook you worked on, and a Python script-converted version of it (index.py). Do not put index.py in your quarto blog folder.\n\n\n\nHint\nThe easiest way to create a post like this is to solve the problem in a Jupyter Notebook or Python script first, and then transfer the results over to your blog."
+  },
+  {
+    "objectID": "posts/hw0/index.html#format",
+    "href": "posts/hw0/index.html#format",
+    "title": "Homework 0",
+    "section": "Format",
+    "text": "Format\n\nFor the PDF section, you have to submit the PDF-printed version of your Quarto preview. Anything else will receive “In Progress” grade at best, incuding:\n\n\nJupyter notebook or JupyterLab screen printed\nHTML-converted Jupyter notebook printed\nPDF-converted Jupyter notebook or JupyterLab\nPDF generated directly using Quarto (through pandoc and latex)\n\n\nFor the files section, you have to submit code necessary to reproduce your results, including index.ipynb and index.py, as specified above."
+  },
+  {
+    "objectID": "posts/hw0/index.html#coding-problem",
+    "href": "posts/hw0/index.html#coding-problem",
+    "title": "Homework 0",
+    "section": "Coding Problem",
+    "text": "Coding Problem\n\nThe autograder task is complete, receiving full mark on Gradescope.\nThe plot is readable and contains axis labels, a title, and a legend if appropriate."
+  },
+  {
+    "objectID": "posts/hw0/index.html#style-and-documentation",
+    "href": "posts/hw0/index.html#style-and-documentation",
+    "title": "Homework 0",
+    "section": "Style and Documentation",
+    "text": "Style and Documentation\n\nRepeated operations should be enclosed in functions.\nFor-loops are minimized by making full use of vectorized operations for Numpy arrays and Pandas data frames.\nHelpful comments are supplied throughout the code. Docstrings are supplied for any functions and classes you define."
+  },
+  {
+    "objectID": "posts/hw0/index.html#writing",
+    "href": "posts/hw0/index.html#writing",
+    "title": "Homework 0",
+    "section": "Writing",
+    "text": "Writing\n\nThe overall post is written in engaging and unambiguous English prose. There is written explanation throughout the post, such that a PIC16A student could learn to perform the demonstrated tasks by reading the post.\nEach block of code has a clearly-explained purpose.\nThe post is organized into clearly delimited sections using markdown headers (#), making it easier for the reader to navigate."
+  },
+  {
+    "objectID": "posts/installation/index.html",
+    "href": "posts/installation/index.html",
+    "title": "Software Installation",
+    "section": "",
+    "text": "The purpose of this page is to get you set up with the software tools we’ll use in PIC 16B, including Anaconda, git + GitHub, and Quarto."
+  },
+  {
+    "objectID": "posts/installation/index.html#install-and-configure-anaconda",
+    "href": "posts/installation/index.html#install-and-configure-anaconda",
+    "title": "Software Installation",
+    "section": "1. Install and Configure Anaconda",
+    "text": "1. Install and Configure Anaconda\nAn important part of PIC16B is navigating the Python package ecosystem.\n https://xkcd.com/1987/\nWe will do so using the Anaconda distribution of Python. Getting set up with Anaconda is a somewhat detailed process, outlined below.\nYou should follow these instructions even if you already have Anaconda installed. Uninstalling and reinstalling is recommended.\n\na. Install Anaconda\nYou can find installers for Anaconda here. Choose the one appropriate to your operating system.\nIf installing on macOS, do not install Anaconda in the root-level opt directory. It is recommended that you install in the folder directly under your username. This is the same folder in which your “Downloads” folder exists. In some cases, Anaconda may suggest installing in a folder called opt under your username; this is fine.\n\n\n\nA screencap of the Anaconda graphical installer. The prompt states ‘You have chosen to install this software in the folder philchodrow on the disk Macintosh HD’\n\n\nExample of installing Anaconda to the directory corresponding to your username.\n\n\nb. Create the PIC16B-24F Anaconda Environment\nWe will create PIC16B-24F anaconda environment with specific package versions. They are listed in a .yml file, depending on OS. We will fix the versions of the following python and other packages throughout the quarter:\n\npython=3.11.6\nnb_conda=2.2.1\nnb_conda_kernels=2.3.1\npandas=2.0.3\nmatplotlib=3.7.2\nscikit-learn=1.3.0\nseaborn=0.12.2\nplotly=5.18.0\nscrapy=2.8.0\ntwisted=22.10.0\nflask=3.0.0\njinja2=3.1.2\njupyter_client=7.4.9\njupyter_core=5.3.0\njupyter_server=1.23.4\njupyterlab=3.6.3\nnotebook=6.5.4\n\nDownload PIC16B-24F-&lt;os&gt;.yml file corresponding to your OS and run the following from the Anaconda Prompt from the directory where the file is located:\nconda env create -f PIC16B-24F-&lt;os&gt;.yml\nThis will create a new environment PIC16B-24F, and I will use that environment in the lectures. Full environment for each OS:\n\nWindows UPDATED 10/2\nMac M1/M2\nLinux\nGeneric – e.g., Mac with Intel chip (sorry, I no longer own one). You may want to change conda’s environment solver to mamba for faster installation.\n\nNote that an autograder will be in use for this course, set up on Ubuntu Linux.\n\nInstalling additional packages\nWe will mainly be using the PIC16B-24F environment throughout the course – changing package versions unless prompted is discouraged. In the future, if you ever attempt to import a package and encounter an error, you may attempt to install it via the Environments tab on Anaconda Navigator. Click on Channels button and add “conda-forge” channel. Then, search for the package you need on the right-hand side (you may need to update the index).\nCheck the box beside this package, and then click “Apply” to install.\nIn this course, we’ll primarily demonstrate deep learning libraries (e.g., Keras, TensorFlow, and PyTorch) using Google Colab, which has some significant benefits related to speed of computation. However, you can also try to install these packages via the package manager.\nNote: If you want to use command lines to install Python packages in the future, try to follow prompts that look like\nconda activate PIC16B-24F\nconda install --channel=conda-forge &lt;package name&gt;\nrather than the ones that start with pip install. If this sentence didn’t make sense to you, you can ignore it and stick to using Anaconda navigator.\n\n\n\nd. Launch JupyterLab\nNow launch Anaconda Navigator and open the “Home” tab. Launch JupyterLab. Select the environment PIC16B-24F.\n Selecting the PIC16B-24F environment on Anaconda Navigator\nCreate a new Jupyter notebook. Change the kernel to the PIC16B-24F environment that you created in Step 1b.\n Selecting the PIC16B-24F environment from within a Jupyter notebook.\n\n\ne. Verify\nType the two lines below into your blank Jupyter Notebook and run them, adding in your name. If you do not encounter an error, then your setup was successful. Otherwise, contact the instructor or TA for help.\nimport pandas as pd\nprint(\"My name is [your name] and I installed Anaconda\")\n\n\nf. Creating a new environment on Anaconda (optional)\nSometimes, especially for the term project, you may want to use an environment other than what we have set up for the lectures. You can follow the step below to create a “fresh” environment.\n\nOpen Anaconda Navigator.\nNavigate to the Environments tab.\nChoose “Create.”\nCreate a Python 3.11 environment named “PIC16B-project”."
+  },
+  {
+    "objectID": "posts/installation/index.html#github-and-github-desktop",
+    "href": "posts/installation/index.html#github-and-github-desktop",
+    "title": "Software Installation",
+    "section": "2. GitHub and GitHub Desktop",
+    "text": "2. GitHub and GitHub Desktop\nIf you don’t have a GitHub account yet, create one on GitHub. You get a lot of free stuff as a student.\nAlso download GitHub Desktop, a graphical client for working with git. If you do not use GitHub Desktop (or another graphical client), you will need to work with git from the command line.\nConnect your GitHub Desktop app to your GitHub account."
+  },
+  {
+    "objectID": "posts/installation/index.html#pick-your-favorite-text-editor",
+    "href": "posts/installation/index.html#pick-your-favorite-text-editor",
+    "title": "Software Installation",
+    "section": "3. Pick Your Favorite Text Editor",
+    "text": "3. Pick Your Favorite Text Editor\nText editors allow you to make modifications to plaintext files. They are useful for coding, writing, and any other tasks that require the manipulation of plaintext.\nI like to use JupyterLab or Visual Studio Code. For some reason, my VS code had trouble with Quarto, so I’m going to use JupyterLab. I sometimes use RStudio for my Quarto editor, but that’s another story.1\nSublime Text and Atom are also popular. Some people also use Notepad++ but that might not be the best option for beginners. Beyond this course, if you expect to write a significant amount of code in your career then it is worthwhile to find a text editor that you like.\nOnce you’ve installed a text editor that you like, try opening it up and modifying a text file.\nNext, try writing a simple Python file and running it from your editor. To do this, first paste the following into a file called my_script.py:\nprint(\"I can run Python scripts from my text editor!\")\nThen, open a terminal window from your editor. In the terminal, write python3 my_script.py and hit enter. You’ll need to ensure that your terminal is in the same location as the file my_script.py."
+  },
+  {
+    "objectID": "posts/installation/index.html#install-quarto",
+    "href": "posts/installation/index.html#install-quarto",
+    "title": "Software Installation",
+    "section": "4. Install Quarto",
+    "text": "4. Install Quarto\nIn this course, we’ll use Quarto to create a simple, attractive website on which to host our homework and project submissions.\nFollow the instructions here: https://quarto.org/docs/get-started/Links"
+  },
+  {
+    "objectID": "posts/installation/index.html#footnotes",
+    "href": "posts/installation/index.html#footnotes",
+    "title": "Software Installation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn fact, Quarto is created by people in Posit, previously RStudio.↩︎"
+  },
+  {
+    "objectID": "posts/composing/index.html",
+    "href": "posts/composing/index.html",
+    "title": "Creating Posts",
+    "section": "",
+    "text": "How to create technical posts that include Python code, explanatory text, and notes."
+  },
+  {
+    "objectID": "posts/composing/index.html#directory",
+    "href": "posts/composing/index.html#directory",
+    "title": "Creating Posts",
+    "section": "Directory",
+    "text": "Directory\nYour posts should be placed in the posts/ directory of your website.\nIf you want to make a new page called bruin, then create a new folder named bruin/ inside posts/. For example:\nposts\n└───composing \n└───bruin &lt; new folder\n└───quarto\n└───software\n└───welcome"
+  },
+  {
+    "objectID": "posts/composing/index.html#create-the-file",
+    "href": "posts/composing/index.html#create-the-file",
+    "title": "Creating Posts",
+    "section": "Create the File",
+    "text": "Create the File\nYou have two options with the folder bruin/.\nOption 1: Add a Jupyter Notebook named index.ipynb Since your homework posts will be based on previous work you did in a Jupyter notebook or Google colab, this will probably be the easier option for publishing homeworks.\nOption 2: Add a index.qmd text file But this is probably a better option for your group project blog post, and once you (hopefully) continue to build up your portfolio using this website.\nFor either options, make sure to add a header that looks like this to the top:\n---\ntitle: \"Creating posts\"\nauthor: \"Seyoon\"\ndate: \"2023-12-23\"\ncategories: [week 0, example]\n---\nIn Jupyter notebook, this header should be in a raw cell up top."
+  },
+  {
+    "objectID": "posts/composing/index.html#markdown-styling",
+    "href": "posts/composing/index.html#markdown-styling",
+    "title": "Creating Posts",
+    "section": "Markdown Styling",
+    "text": "Markdown Styling\nYou can use Markdown to style basic text, much as you do in Jupyter Notebooks.\nLook into Quarto’s Markdown basics, Figures and Tables. You’re welcome to explore other pages that cover more complex concepts like Diagrams, Videos, and Callout Blocks."
+  },
+  {
+    "objectID": "posts/composing/index.html#math",
+    "href": "posts/composing/index.html#math",
+    "title": "Creating Posts",
+    "section": "Math",
+    "text": "Math\nIf you are familiar with the \\[\\LaTeX\\] typesetting system, you can use many standard commands by enclosing them in double $ symbols. You can make both inline math like \\[\nf(x) = e^x\n\\] and display math like \\[\n\\sum_{i=1}^\\infty \\frac{1}{i^2} = \\frac{\\pi^2}{6}.\n\\]"
+  },
+  {
+    "objectID": "posts/composing/index.html#images",
+    "href": "posts/composing/index.html#images",
+    "title": "Creating Posts",
+    "section": "Images",
+    "text": "Images\nYou can and should include images in your posts, especially in cases where you have created a data visualization. If the image is already available online, you can link to it using the syntax ![alt text](image_url):\n\n(Source: https://xkcd.com/353/)"
+  },
+  {
+    "objectID": "posts/composing/index.html#code",
+    "href": "posts/composing/index.html#code",
+    "title": "Creating Posts",
+    "section": "Code",
+    "text": "Code\nThere are two main ways to insert code in your posts. When talking about a short concept, like the np.random.rand() function, you can type back ticks like this: `np.random.rand()`.\nTo create a larger block of code, use three consecutive backticks ``` to both open and close the code block. If you place the word “{python}” immediately after the opening code blocks, you’ll get attractive syntax highlighting:\n\ndef f(x):\n    \"\"\"\n    A cool function that multiples an input x by 2. \n    \"\"\"\n    return 2*x\n\ny = f(3)\nprint(y)\n\n6\n\n\nNot only that, once you render the page with Quarto, the code output will show up below. If that’s not what you want, use the word “python” instead of “{python}”\nLook at this other cool example from the Quarto tutorial.\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UCLA PIC 16B Lec 2, Fall 2024",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nHomework 0\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\n\n\n\n\n\n\nJan 4, 2025\n\n\n\n\n\n\n  \n\n\n\n\nCreating Posts\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nJan 3, 2025\n\n\n\n\n\n\n  \n\n\n\n\nHello, Quarto\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2025\n\n\n\n\n\n\n  \n\n\n\n\nSoftware Installation\n\n\n\n\n\n\n\nWeek 0\n\n\n\n\n\n\n\n\n\n\n\nJan 1, 2025\n\n\n\n\n\n\nNo matching items"
+  }
+]
