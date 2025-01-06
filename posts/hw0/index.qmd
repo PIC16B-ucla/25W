@@ -1,0 +1,109 @@
+---
+title: "Homework 0"
+date: "2025-01-04"
+image: penguin.jpg
+categories: [Homework]
+draft: false
+---
+
+In this blog post assignment, you’ll create a short post for your new website. The primary purpose is to give you some practice working with Quarto blogging with Python code.
+
+Make sure to check the “Specifications” section at the bottom of this assignment for an explicit list of criteria that your blog post must meet in order to receive credit.
+
+NOTE: Writing is always part of your homework! The recommended style is as if you are writing a tech blog post.
+
+# Instructions
+
+To complete this homework assignment, you’ll need to have completed installations of Anaconda, GitHub Desktop, and Quarto as described in the instructions in BruinLearn.
+
+## 1. Complete the Hello, Quarto activity
+Your first step should be to complete the [Hello Quarto](../quarto) activity to help you get familiar with blogging with Quarto. If you already completed this activity in Discussion, then you can skip to the next step.
+
+If you haven’t done so already, now is a good time to modify your site. Look around the site’s files and see if you can figure out how to modify the `About` page and the blog’s title from `about.qmd` and `_quarto.yml`.
+
+See these pages for help: [about page](https://quarto.org/docs/websites/website-about.html), [config options](https://quarto.org/docs/reference/projects/websites.html).
+
+If you are comfortable with `css`, then you can directly modify `style.css` and other files in the repo.
+
+All this is optional, and it’s not necessary to put your real name or real photo anywhere on the site.
+
+## 2. Speedbump: The Autograder
+
+Before we proceed, let's talk about the autograder. Some of the specs in the homework assignments may require you to go through an autograder. 
+Depending on the homework, you must submit a single Python file (`.py`) or a compressed `.zip` file containing multiple code files to the "autograder" submission window.
+For future homework, the autograder task will be a part of the main programming task. For this one, let's just do a simple PIC 16A-level task.
+Remember that __for your blog post to be graded, you must first pass the autograder.__ I strongly encourage you to do so a few days before the deadline.
+You have an unlimited number of submissions to the autograder.
+
+### Problem. Define `make_count_dictionary` in `HW0.py`
+
+In a separate file named `HW0.py` (please do not use a different name), write the function `make_count_dictionary` that takes a list `L` and returns a dictionary `D` where: 
+
+- The *keys* of `D` are the unique elements of `L` (i.e., each element of `L` appears only once). 
+- The value `D[i]` is the number of times that `i` appears in list `L`. 
+
+Your code should work for lists of strings, lists of integers, and lists containing both strings and integers. 
+
+For example: 
+
+```python
+# input
+L = ["a", "a", "b", "c"]
+# output
+{"a" : 2, "b" : 1, "c" : 1}
+```
+
+For this homework, you don't need to mention this task in your blog.
+
+## 3. Create a post
+Create a simple blog post, using the instructions and demonstrations [here](../composing/). Here is the prompt for your post:
+
+> Write a tutorial explaining how to construct an interesting data visualization of the [Palmer Penguins](https://github.com/allisonhorst/palmerpenguins) data set.
+
+You can read the data into Python by running:
+
+```python
+import pandas as pd
+url = "https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv"
+penguins = pd.read_csv(url)
+```
+
+Your visualization does not have to be complex or fancy, but it should be highly readable and appropriately labeled.
+
+Your post should include the image directly under the code that generates it, as demonstrated [here](../composing).
+
+**Do not publish your blog page for now. You will be allowed to publish your blog after the quarter.**
+
+There will be __three__ Gradescope assignments open for submission, the first one for __autograder__, the second for __PDF__, and the third one for __files__. You have to submit __all__ of them for your homework to earn homework credits.
+
+- For the __autograder__ assignment, please follow the directions.
+- For the __PDF__ assingment, please submit your newly-created blog preview printed as PDF.
+  - Use `quarto preview` to open the page.
+- For the __files__ assignment, please submit any code file you wrote for your homework, not including what you have submitted for autograder. All the `.py` file, `.ipynb` file, or `.qmd` files all included. It should include a `.py` file converted from any `.ipynb` file. The grader should be able to reproduce your result from the code you submitted.
+  - It must include `index.ipynb`, the Jupyter Notebook you worked on, and a Python script-converted version of it (`index.py`). *Do not put `index.py` in your quarto blog folder.*
+
+### Hint
+The easiest way to create a post like this is to solve the problem in a Jupyter Notebook or Python script first, and then transfer the results over to your blog.
+
+# Specifications
+## Format
+0. For the PDF section, __you have to submit the PDF-printed version of your Quarto preview__. Anything else will receive "In Progress" grade at best, incuding:
+  - Jupyter notebook or JupyterLab screen printed 
+  - HTML-converted Jupyter notebook printed
+  - PDF-converted Jupyter notebook or JupyterLab
+  - PDF generated directly using Quarto (through pandoc and latex)
+0. For the files section, you have to submit code necessary to reproduce your results, including `index.ipynb` and `index.py`, as specified above. 
+
+## Coding Problem
+1. The autograder task is complete, receiving full mark on Gradescope.
+2. The plot is readable and contains axis labels, a title, and a legend if appropriate.
+
+## Style and Documentation
+3. Repeated operations should be enclosed in functions.
+4. For-loops are minimized by making full use of vectorized operations for Numpy arrays and Pandas data frames.
+5. Helpful comments are supplied throughout the code. Docstrings are supplied for any functions and classes you define.
+
+## Writing
+6. The overall post is written in engaging and unambiguous English prose. There is written explanation throughout the post, such that a PIC16A student could learn to perform the demonstrated tasks by reading the post.
+7. Each block of code has a clearly-explained purpose.
+8. The post is organized into clearly delimited sections using markdown headers (`#`), making it easier for the reader to navigate.
