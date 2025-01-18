@@ -222,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>Country</code>: The name of the country in which the station is located.</li>
 <li><code>Year</code>: The year in which the reading was taken.</li>
 <li><code>Month</code>: The month in which the reading was taken.</li>
-<li><code>Temp</code>: The average temperature at the specified station during the specified year and month. (<em>Note: the temperatures in the raw data are already averages by month, so you don’t have to do any aggregation at this stage.</em>)</li>
+<li><code>Temp</code>: The average temperature at the specified station during the specified year and month. (<em>Note: the temperatures in the raw data are already averages by month, so you don’t have to do any aggregation at this stage. There are station names associated with multiple station IDs, so be careful if you choose to aggregate here.</em>)</li>
 </ul>
 <p><strong>Hint</strong>: Inside the function, you would want to put in the given variables (like <code>year_begin</code>) inside the query string (like <code>SELECT ... FROM ... WHERE ...</code>). While you can do this with string concatenation, using the fancy Python <a href="https://realpython.com/python-string-formatting/#3-string-interpolation-f-strings-python-36">f-strings</a> will probably make your life easier. Be careful not to forget quotation marks for the string variables.</p>
 <p>You should load the <code>query_climate_database()</code> function and show its content in your blog:</p>
