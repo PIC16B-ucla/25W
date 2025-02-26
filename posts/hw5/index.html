@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The <code>base_model_layer</code> constructed above.</li>
 <li>A <code>Dense(2)</code> layer at the very end to actually perform the classification.</li>
 </ol>
-<p>Preprocessing layers are included in <code>MobileNetV3Large</code>, you don’t need a separate preprocessing layer. Between 2. and 3., you might want to place a small number of additional layers, like <code>GlobalMaxPooling2D</code> or possibly <code>Dropout</code>. You don’t need a lot though! Once you’ve constructed the model, check the <code>model.summary()</code> to see why – there is a LOT of complexity hidden in the <code>base_model_layer</code>. Show the summary and comment. How many parameters do we have to train in the model?</p>
+<p>Preprocessing layers can be included in <code>MobileNetV3Large</code> by setting <code>include_preprocessing=True</code>, which is the default. You don’t need a separate preprocessing layer. Between 2. and 3., you might want to place a small number of additional layers, like <code>GlobalMaxPooling2D</code> or possibly <code>Dropout</code>. You don’t need a lot though! Once you’ve constructed the model, check the <code>model.summary()</code> to see why – there is a LOT of complexity hidden in the <code>base_model_layer</code>. Show the summary and comment. How many parameters do we have to train in the model?</p>
 <p>Finally, train your model for 20 epochs, and visualize the training history.</p>
 <p>This time, please make sure that you are able to achieve <strong>at least</strong> 93% validation accuracy. That’s not a typo!</p>
 <ol type="1">
